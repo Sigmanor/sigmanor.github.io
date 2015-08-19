@@ -27,7 +27,7 @@ Start Navigation Styles
 
 .navbar-inverse .navbar-nav > li > a
 {
-    color: #acacac;
+    color: #9A9A9A;
 }
 
 .navbar-inverse .navbar-nav > .open > a,
@@ -909,12 +909,12 @@ a
 .more-info a:focus,
 .more-info a:visited
 {
-    color: #d6d6d6;
+    color: #B8B8B8;
 }
 
 .more-info a:hover
 {
-    color: darkgray;
+    color: #919191;
 }
 
 
