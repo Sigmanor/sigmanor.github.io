@@ -8,10 +8,8 @@
     <meta name="google-site-verification" content="GRkcAGlY9EVfcRPS6SwUIMMUfab7HhKTcUxHCWVWXh8" />
     <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
     <title>Sigmanor</title>
-    <link rel="stylesheet" href="style/bootstrap.min.css">
-    <!-- <link href="../css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="style/bootstrap.min.css" rel="stylesheet">
     <link href="style/main.min.css" rel="stylesheet">
-<!--     <link href="css/animate.css" rel="stylesheet"> -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -36,47 +34,39 @@
         </div>
 
         <div class="navbar-header">
-<!-- <img class="img-logo" src="img/logo.png" width="59" alt=" logo"> -->
           <a class="navbar-brand" href="/">/dev/Sigmanor</a>
-
         </div>
 
       </div>
     </div>
 
-<div id="mPcont" class="container">
-<div class="row">
+<div id="mPcont" class="container table-scroll">
 
-  <div class="col-sm-6 col-md-6">
-    <div class="thumbnail">
-      <img class="shadowBorder" src="img/mainTumb1.png" alt="Aion Game Launcher">
-      <div class="caption">
-        <h3>Aion Game Launcher</h3>
-        <p>Лаунчер для игры на Американских серверах Aion.</p>
-        <p><a href="/aion-game-launcher/" class="btn btn-primary" role="button">Подробней</a></p>
-      </div>
-    </div>
-  </div>
-<!-- class="aglAnimation"
-class="rasAnimation" -->
-  <div class="col-sm-6 col-md-6">
-    <div class="thumbnail">
-      <img class="shadowBorder" src="img/rAion1.png" alt="Rainmeter Aion Skin">
-      <div class="caption">
-        <h3>Rainmeter Aion Skin</h3>
-        <p>Отображение статуса серверов на рабочем столе.</p>
-        <p><a href="https://vk.com/page-12092657_47516397" class="btn btn-primary" role="button" title="Please save this document first.">Подробней</a></p>
-      </div>
-    </div>
-  </div>
+<table class="table table-bordered table-width">
+  <thead>
+  <tr>
+    <th class="project-name">Мои проекты</th>
+    <th class="project-descriprion">Описание</th>
+    <th class="project-number">Репозиторий</th>
+  </tr>
+ </thead>
 
-</div><!--/.row -->
+  <tbody>
+    <tr> <td> <a href="/aion-game-launcher">Aion Game Launcher</a> </td> <td>Альтенативный лаунчер для игры на Американских серверах игры Aion.</td> <td class="text-center"><a href="https://github.com/Sigmanor/Aion-Game-Launcher" target="_blank"><img src="img/gitHub-icon.png" height="20" width="20" alt=""></a></td> </tr>
+ 
+    <tr> <td><a href="https://vk.com/page-12092657_47516397">Aion Servers Status</a> </td> <td>Rainmeter скин для отображение на рабочем столе статуса серверов игры Aion.</td> <td class="text-center"><a href="https://github.com/Sigmanor/Aion-Servers-Status" target="_blank"><img src="img/gitHub-icon.png" height="20" width="20" alt=""></a></td> </tr>
+
+    <tr> <td> <a href="/">sigmanor.pp.ua</a> </td> <td>Мой сайт, который хостится на GitHub Pages.</td> <td class="text-center"><a href="https://github.com/Sigmanor/sigmanor.github.io" target="_blank"><img src="img/gitHub-icon.png" height="20" width="20" alt=""></a></td> </tr>
+  </tbody>
+
+</table>
+
     </div><!-- /.container -->
 
 <div id="footerIEfix"></div>
     <div id="footer">
       <div class="container">
-        <p><small>2015 &middot; <a href="/">Sigmanor</a> &middot; Built on <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> v3.3.5</small></p>
+        <p><small>2015 &middot; <a href="/">Sigmanor</a> &middot; Built on <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> v3.3.6</small></p>
         <!-- <p><small>Aion™ is a copyright of NC Interactive, Inc. Aion Game Launcher and sigmanor.tk is not in any way affiliated with NC Interactive, Inc. or Gameforge Productions GmbH.</small></p> -->
       </div>
 </div>
@@ -85,8 +75,6 @@ class="rasAnimation" -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/smoothscroll.min.js"></script>
   <script src="js/main.min.js"></script>
-  <!-- <script>var lng = navigator.browserLanguage || navigator.language || navigator.userLanguage;
-alert(lng);</script> -->
 
   </body>
 </html>

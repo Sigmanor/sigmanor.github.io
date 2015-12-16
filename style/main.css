@@ -12,7 +12,7 @@ Start Navigation Styles
 
 /*
 .navbar-nav > li > a, .navbar-brand {
-    padding-top:10px !important; 
+    padding-top:10px !important;
     padding-bottom:0 !important;
     height: 40px;
 }
@@ -27,7 +27,7 @@ Start Navigation Styles
 
 .navbar-inverse .navbar-nav > li > a
 {
-    color: #9A9A9A;
+    color: #9a9a9a;
 }
 
 .navbar-inverse .navbar-nav > .open > a,
@@ -147,7 +147,7 @@ code
     margin-top: 10px;
 	margin-bottom: 9px;
 }
-	
+
 }
 */
 
@@ -422,19 +422,69 @@ body
 
 /*tables*/
 
-.table > thead > tr > th
+.project-number
+{
+    text-align: center;
+}
+
+.project-descriprion,
+.project-number,
+.project-name
+{
+    background-color: #EFEFF1;
+}
+
+@media only screen and (min-width: 1599px)
+{
+    .table-width
+    {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1366px)
+{
+    .table-width
+    {
+        width: 80%;
+    }
+}
+
+.table-scroll
+{
+    overflow: auto;
+}
+
+#mPcont table
+{
+    margin: auto;
+}
+
+.table-bordered,
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th
+{
+    border: 1px solid #b4b4b5;
+}
+
+/*table modal*/
+#tableModal > .table > thead > tr > th
 {
     vertical-align: bottom;
 
     border-bottom: 0 solid #ddd;
 }
 
-td > a
+#tableModal > td > a
 {
     text-decoration: none!important;
 }
 
-td
+#tableModal > td
 {
     cursor: default;
 }
@@ -487,40 +537,40 @@ td
     }
 }
 
-.table
+#tableModal .table
 {
     table-layout: fixed;
 
     word-wrap: break-word;
 }
 
-.table-bordered > thead > tr > th,
-.table-bordered > tbody > tr > th,
-.table-bordered > tfoot > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > td
+#tableModal > .table-bordered > thead > tr > th,
+#tableModal > .table-bordered > tbody > tr > th,
+#tableModal > .table-bordered > tfoot > tr > th,
+#tableModal > .table-bordered > thead > tr > td,
+#tableModal > .table-bordered > tbody > tr > td,
+#tableModal > .table-bordered > tfoot > tr > td
 {
-    border: 1px solid #efeff1;
+    border: 1px solid #b4b4b5;
 }
 
-thead th
+#tableModal thead th
 {
     color: #3e3e3e;
     background-color: #efeff1;
 }
 
-tbody td
+#tableModal tbody td
 {
     background-color: transparent;
 }
 
-table
+#tableModal table
 {
     border: 1px solid #ddd;
 }
 
-thead
+#tableModal thead
 {
     border-top: 1px solid #ddd;
     border-right: 1px solid #ddd;
@@ -530,7 +580,6 @@ thead
 .close
 {
     position: relative;
-    bottom: 8px;
 
     border: 0 outset transparent;
 }
@@ -542,6 +591,8 @@ thead
 
 .modal-header
 {
+    padding: 10px;
+
     border-bottom: 1px solid #d7d7d7;
 }
 
@@ -572,13 +623,6 @@ thead
 {
     display: none;
 }
-
-/*
-.push-it
-{
-    padding-top: 50px; 
-}
-*/
 
 .rowfix
 {
@@ -909,7 +953,7 @@ a
 .more-info a:focus,
 .more-info a:visited
 {
-    color: #B8B8B8;
+    color: #b8b8b8;
 }
 
 .more-info a:hover
