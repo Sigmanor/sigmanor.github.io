@@ -431,7 +431,7 @@ body
 .project-number,
 .project-name
 {
-    background-color: #EFEFF1;
+    background-color: #efeff1;
 }
 
 @media only screen and (min-width: 1599px)
@@ -1029,14 +1029,12 @@ Start Error Styles
 
 #error-page
 {
-    background-color: #e5e4e5;
+    background-color: #21232a;
 }
 
 #error-page .btn-primary
 {
-    font-size: 18px;
-
-    padding: 10px 16px;
+    font-size: 20px;
 }
 
 #error-page .glyphicon
@@ -1044,9 +1042,23 @@ Start Error Styles
     color: #fff;
 }
 
+#error-page .error
+{
+    padding: 19% 0 20px 0;
+}
+
+#error-page .error-text
+{
+    font-size: 20px;
+
+    color: #C0C0C0;
+}
+
 #error-page h1
 {
-    color: black;
+    font-size: 40px;
+
+    color: #fff;
 }
 
 /*-----------------------------
