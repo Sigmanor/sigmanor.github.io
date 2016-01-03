@@ -421,6 +421,44 @@ body
 
 
 /*tables*/
+#tableFAQ > td > a
+{
+    text-decoration: none!important;
+}
+
+#tableFAQ > td
+{
+    cursor: default;
+}
+
+#tableFAQ .table
+{
+    table-layout: fixed;
+
+    word-wrap: break-word;
+}
+
+#tableFAQ > .table-bordered > thead > tr > td,
+#tableFAQ > .table-bordered > tbody > tr > td,
+#tableFAQ > .table-bordered > tfoot > tr > td
+{
+    border: 1px solid #b4b4b5;
+}
+
+#tableFAQ tbody td
+{
+    background-color: transparent;
+}
+
+#tableFAQ table
+{
+    border: 1px solid #ddd;
+}
+
+#tableFAQ p
+{
+    margin: 0;
+}
 
 .project-number
 {
