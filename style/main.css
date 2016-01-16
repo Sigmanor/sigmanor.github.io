@@ -339,18 +339,25 @@ body
     }
 }
 
-@media (max-height:455px)
+@media (max-height:490px)
+{
+    #mPcont .panel
+    {
+        top:0;
+    }
+}
+
+/*@media (max-height:455px)
 {
     #mPcont .panel
     {
         min-height: 400px;
     }
-}
+}*/
 
 @media (max-width:308px)
 {
-    #mPcont .panel,
-    #main-page #footer
+    #mPcont .panel
     {
         min-width: 400px;
     }
