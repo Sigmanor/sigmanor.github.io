@@ -34,9 +34,10 @@ body {
 	color: #282C34;
 }
 
-@media (min-width:320px) {
+@media (max-width:320px) {
 	#main{
 		top: 45%;
+		width: 100%;
 	}
 }
 
