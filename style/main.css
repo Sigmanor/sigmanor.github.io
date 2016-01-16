@@ -246,9 +246,12 @@ body
 
 
 /*New Main Page*/
-#main-page{
-    background: url(../img/bg-1.png) repeat;
+
+#main-page
+{
     font-family: Consolas,monaco,monospace;
+
+    background: url(../img/bg-1.png) repeat;
 }
 
 #main-page #footer
@@ -276,57 +279,79 @@ body
     color: #ccc;
 }
 
-#mPcont p{
-	color: #323232;
+#mPcont p
+{
+    color: #323232;
 }
 
-#mPcont h1{
-	color: #282C34;
+#mPcont h1
+{
+    color: #282c34;
 }
 
-#mPcont .panel{
-  width: 400px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 20px #000;
+#mPcont .panel
+{
+    position: absolute;
+    top: 12%;
+    left: 36%;
+
+    width: 400px;
+
+    box-shadow: 0 0 20px #000;
 }
 
-#mPcont hr{
-border-color: #EAEAEA
--moz-use-text-color #EAEAEA;
-border-style: solid none;
-border-width: 1px 0;
-margin: 18px 0;
+#mPcont hr
+{
+    margin: 18px 0;
+
+    border-width: 1px 0;
+    border-style: solid none;
+    border-color: #eaeaea
+    -moz-use-text-color #eaeaea;
 }
 
-.avatar img{
-  height: 150px;
-	width: 150px;
-	border-radius: 100%;
-  border: 1px solid #282C34;
+.avatar img
+{
+    width: 150px;
+    height: 150px;
+
+    border: 1px solid #282c34;
+    border-radius: 100%;
 }
 
-#mPcont ul li{
-	display: inline;
-	position: relative;
-	right: 18px;
-  padding-left: 5px;
+#mPcont ul li
+{
+    position: relative;
+    right: 18px;
+
+    display: inline;
+
+    padding-left: 5px;
 }
 
-@media (max-width:408px) {
-	#mPcont .panel{
-		top: 45%;
-		width: 100%;
-	}
-}
+@media (max-width:408px)
+{
+    #mPcont .panel
+    {
+        top: 45%;
 
-@media (max-height:455px) {
-  #main-page{
-      min-height: 400px;
+        width: 100%;
     }
 }
+
+@media (max-height:455px)
+{
+    #main-page
+    {
+        min-height: 400px;
+    }
+
+    #main-page #footer
+    {
+        display: none;
+    }
+}
+
 /*New Main Page*/
 
 
@@ -1104,6 +1129,7 @@ Start Footer Styles
     padding-top: 14px;
 
     text-align: center;
+
     border-top: 1px solid #d7d7d7;
     background-color: #efeff1;
 }
@@ -1174,7 +1200,7 @@ Start Error Styles
 {
     font-size: 20px;
 
-    color: #C0C0C0;
+    color: #c0c0c0;
 }
 
 #error-page h1
