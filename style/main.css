@@ -244,6 +244,88 @@ body
     background-color: #fbfbfb;
 }
 
+#main-page{
+    background: url(../img/bg-1.png) repeat;
+    font-family: Consolas,monaco,monospace;
+}
+
+#main-page #footer
+{
+    border-top: 1px solid transparent;
+    background-color: transparent;
+}
+
+#main-page #footer a
+{
+    text-decoration: underline;
+
+    color: #ccc;
+}
+
+#main-page #footer a:focus,
+#main-page #footer a:hover,
+#main-page #footer a:visited
+{
+    color: #ccc;
+}
+
+#main-page #footer p
+{
+    color: #ccc;
+}
+
+#mPcont p{
+	color: #323232;
+}
+
+#mPcont h1{
+	color: #282C34;
+}
+
+#mPcont .panel{
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px #000;
+}
+
+#mPcont hr{
+border-color: #EAEAEA
+-moz-use-text-color #EAEAEA;
+border-style: solid none;
+border-width: 1px 0;
+margin: 18px 0;
+}
+
+.avatar img{
+  height: 150px;
+	width: 150px;
+	border-radius: 100%;
+  border: 1px solid #282C34;
+}
+
+#mPcont ul li{
+	display: inline;
+	position: relative;
+	right: 18px;
+  padding-left: 5px;
+}
+
+@media (max-width:408px) {
+	#mPcont .panel{
+		top: 45%;
+		width: 100%;
+	}
+}
+
+@media (max-height:430px) {
+	#footer{
+    display: none;
+	}
+}
+
 
 @media only screen and (max-width: 992px)
 {
@@ -1018,7 +1100,6 @@ Start Footer Styles
     padding-top: 14px;
 
     text-align: center;
-
     border-top: 1px solid #d7d7d7;
     background-color: #efeff1;
 }
