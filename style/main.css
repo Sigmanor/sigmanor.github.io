@@ -292,10 +292,12 @@ body
 #mPcont .panel
 {
     position: absolute;
-    top: 12%;
-    left: 36%;
+    top: 0;
+    right: 0;
+    left: 0;
 
     width: 400px;
+    margin: auto;
 
     box-shadow: 0 0 20px #000;
 }
@@ -333,8 +335,6 @@ body
 {
     #mPcont .panel
     {
-        top: 45%;
-
         width: 100%;
     }
 }
@@ -345,10 +345,14 @@ body
     {
         min-height: 400px;
     }
+}
 
+@media (max-width:308px)
+{
+    #mPcont .panel,
     #main-page #footer
     {
-        display: none;
+        min-width: 400px;
     }
 }
 
