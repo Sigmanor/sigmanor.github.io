@@ -244,6 +244,8 @@ body
     background-color: #fbfbfb;
 }
 
+
+/*New Main Page*/
 #main-page{
     background: url(../img/bg-1.png) repeat;
     font-family: Consolas,monaco,monospace;
@@ -320,11 +322,13 @@ margin: 18px 0;
 	}
 }
 
-@media (max-height:430px) {
-	#footer{
-    display: none;
-	}
+@media (max-height:455px) {
+  #main-page{
+      min-height: 400px;
+    }
 }
+/*New Main Page*/
+
 
 
 @media only screen and (max-width: 992px)
