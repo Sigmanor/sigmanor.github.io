@@ -292,7 +292,7 @@ body
 #mPcont .panel
 {
     position: absolute;
-    top: 0;
+    top: 10%;
     right: 0;
     left: 0;
 
@@ -341,7 +341,7 @@ body
 
 @media (max-height:455px)
 {
-    #main-page
+    #mPcont .panel
     {
         min-height: 400px;
     }
