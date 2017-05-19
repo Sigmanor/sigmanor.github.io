@@ -10,15 +10,6 @@ Start Navigation Styles
     background-color: #efeff1;
 }
 
-/*
-.navbar-nav > li > a, .navbar-brand {
-    padding-top:10px !important;
-    padding-bottom:0 !important;
-    height: 40px;
-}
-.navbar {min-height:30px !important;}
-*/
-
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form
 {
