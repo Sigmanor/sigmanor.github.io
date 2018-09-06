@@ -15,17 +15,17 @@ if (!!navigator.userAgent.match(/Trident\/7\./))
 
 
 /* Randomize background */
-var images = [
-'../img/bg1.png',
-'../img/bg2.jpg',
-'../img/bg3.jpg',
-'../img/bg4.png',
-'../img/bg5.png',
-'../img/bg6.png',
-'../img/bg7.png',
-'../img/bg8.png'
-];
-$('#main-page').css({'background-image': 'url(../img/' + images[Math.floor(Math.random()*images.length)] + ')'});
+// var images = [
+// '../img/bg1.png',
+// '../img/bg2.jpg',
+// '../img/bg3.jpg',
+// '../img/bg4.png',
+// '../img/bg5.png',
+// '../img/bg6.png',
+// '../img/bg7.png',
+// '../img/bg8.png'
+// ];
+// $('#main-page').css({'background-image': 'url(../img/' + images[Math.floor(Math.random()*images.length)] + ')'});
 /* Randomize background */
 
 /*DropDown pos*/

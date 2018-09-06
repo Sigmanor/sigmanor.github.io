@@ -1,3 +1,3 @@
 User-agent: *
 Disallow: /soft/
-Host: www.sigmanor.pp.ua
+Host: www.sigmanor.net
