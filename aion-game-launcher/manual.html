@@ -1,255 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-	<meta name="description" content="Руководство пользователя">
-    <!--[if IE]>    <meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
-    <title>Aion Game Launcher | Руководство</title>
-    <link href="../style/bootstrap.min.css" rel="stylesheet">
-    <link href="../style/main.min.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Руководство пользователя">
+  <!--[if IE]>    <meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <title>Aion Game Launcher | Руководство</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../style/agl.min.css" rel="stylesheet">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+</head>
 
 <body>
 
-      <div class="navbar navbar-inverse navbar-top" role="navigation">
-      <div class="container">
+  <div class="navbar navbar-inverse navbar-top" role="navigation">
+    <div class="container">
 
-		<div class="nav-contact">
-              <a href="https://t.me/Sigmanor" target="_blank"><img  src="../img/telegram_icon.png" height="32" width="32" alt="Telegram"></a>
+      <div class="nav-contact">
+        <a href="https://t.me/Sigmanor" target="_blank"><img src="../img/telegram_icon.png" height="32" width="32" alt="Telegram"></a>
 
-              <a href="http://fb.com/SlGMANOR" target="_blank"><img src="../img/facebook_icon.png" height="32" width="32" alt="Facebook"></a>
+        <a href="http://fb.com/SlGMANOR" target="_blank"><img src="../img/facebook_icon.png" height="32" width="32" alt="Facebook"></a>
 
-              <a href="https://github.com/Sigmanor" target="_blank"><img src="../img/github_icon.png" height="32" width="32" alt="Github"></a>
+        <a href="https://github.com/Sigmanor" target="_blank"><img src="../img/github_icon.png" height="32" width="32"
+            alt="Github"></a>
+      </div>
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Меню</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="/aion-game-launcher/">Главная</a></li>
+          <li class="active"><a href="manual">Руководство</a></li>
+          <li><a href="history">История версий</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </div>
+
+  <div class="push-it container">
+
+    <div class="row">
+
+      <div class="col-md-4 bs-docs-sidebar">
+
+        <ul id="sidebar" class="nav nav-stacked fixed">
+
+          <li>
+            <a href="#nav_install">Установка и первый запуск</a>
+          </li>
+
+          <li>
+            <a href="#nav_screenshots">Скриншоты</a>
+          </li>
+
+          <li>
+            <a href="#nav_start">Подготовка к работе</a>
+            <ul class="nav nav-stacked">
+              <li><a href="#nav_manage_account">Управление аккаунтами</a></li>
+              <li><a href="#nav_more">Дополнительно</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#nav_settings">Настройки лаунчера</a>
+            <ul class="nav nav-stacked">
+              <li><a href="#nav_settings_game">Общие</a></li>
+              <li><a href="#nav_settings_launcher">Расширенные</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#nav_FAQ">Часто задаваемые вопросы</a>
+          </li>
+
+          <li>
+            <a href="#nav_more_questions">Остались вопросы?</a>
+          </li>
+
+          <li>
+            <hr>
+            <a href="#">Наверх</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="col-md-8">
+
+        <div class="page-header">
+          <h2 id="nav_install">Установка и первый запуск</h2>
         </div>
 
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Меню</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+        <p>Архив с программой можно распаковать в любую удобную для вас директорию. Для удачного запуска потребуется <b>Windows
+            XP SP3 и выше</b>. При первом запуске нужно выбрать язык программы, потом откроется окно с Лицензионным
+          соглашением, для дальнейшей работы необходимо нажать кнопку принять. Это стандартная MIT лицензия, с русским
+          переводом можно ознакомиться например <a href="https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F_MIT"
+            target="_blank">тут</a>.</p>
+
+        <p><b>Внимание!</b> Лаунчер не умеет скачивать или обновлять игру.</p>
+
+
+        <div class="page-header">
+          <h2 id="nav_screenshots">Скриншоты</h2>
         </div>
 
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-left">
-            <li><a href="/aion-game-launcher/">Главная</a></li>
-			<li class="active"><a href="manual">Руководство</a></li>
-			<li><a href="history">История версий</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+        <img class="shadowBorder" src="../img/screenshot-1.png" alt="Главное окно">
+
+        <hr>
+
+        <img class="shadowBorder" src="../img/screenshot-2.png" alt="Настройки">
+        <hr>
+
+
+        <img class="shadowBorder" src="../img/screenshot-3.png" alt="О Программе">
+
+        <hr>
+
+        <div class="page-header">
+          <h2 id="nav_start">Подготовка к работе</h2>
+        </div>
+
+        <p>При первом запуске, путь к игре будет найден автоматически (при наличии установленного официального
+          ланучера). Если по какой то причине этого не случилось, то необходимо зайти в <b>Меню > Настройки</b> в
+          пункте <b>Папка с игрой</b> нажать на кнопку с изображением папки, и выбрать папку с игрой. После этого
+          лаунчер готов к запуску игры.</p>
+
+
+        <div class="page-header">
+          <h2 id="nav_manage_account"><small>Управление несколькими аккаунтами</small></h2>
+        </div>
+
+        <p>Для удобства, что бы каждый раз не вводить логин/пароль, можно ввести их в главном окне лаунчера, и
+          поставить галочку на <b>Сохранить</b>. Так же есть возможность сохранить несколько аккаунтов, для этого в
+          поле ввода логина в выпадающем списке нужно выбрать пустую область, и ввести в поля данные второго аккаунта,
+          поставить галочку на <b>Сохранить</b>, теперь из выпадающего списка можно выбрать несколько аккаунтов для
+          игры. Таким способом можно добавить бесконечное количество аккаунтов. Так же можно редактировать уже
+          существующие данные, для этого из выпадающего списка нужно выбрать нужный аккаунт, отредактировать данные в
+          полях, и поставте галочку на <b>Сохранить</b>. Удаление аккаунтов из лаунчера на данный момент не возможно.
+
+          <a href="#nav_faq_first">Волнует безопасность данной функции?</a> </p>
+
+
+        <div class="page-header">
+          <h2 id="nav_more"><small>Дополнительно</small></h2>
+        </div>
+        <p>Для того что бы узнать что скрывается в поле пароля, нужно справа нажать на кнопку с изображением глаза. Для
+          того что бы узнать больше информации о программе, или вручную обновить, необходимо зайти в <b>Меню > Помощь</b>.
+          Так же, в <b>Меню > Дополнительно</b> можно запустить официальный лаунчер. Слайдер в главном окне взят из
+          официального лаунчера, с помощью кнопок ниже можно перейти на интересные ресурсы посвященные Американскому
+          серверу Aion.</p>
+
+        <div class="page-header">
+          <h2 id="nav_settings">Настройки лаунчера</h2>
+
+        </div>
+
+        <div class="page-header">
+          <h2 id="nav_settings_game"><small>Общие</small></h2>
+        </div>
+
+        <p><b>Папка с игрой:</b> Выбор папки с установленной игрой, нужно выбирать корневую папку.</p>
+        <hr>
+        <p><b>Доп. Параметры:</b> Поле для ввода дополнительных параметров запуска игры, указывать через пробел.
+          Некоторые параметры с описанием:</p>
+        <ul>
+          <li><b>-ncping</b> включает функцию NCPing в настройках игры.</li>
+          <li><b>-megaphone</b> включает мировой чат.</li>
+          <li><b>-nowebshop</b> отключает отображение иконки внутриигрового магазина.</li>
+        </ul>
+        <hr>
+        <p><b>Разрядность:</b> Выбор разрядности игрового клиента.</p>
+        <hr>
+        <p><b>Язык лаунчера:</b> Выбор языка программы.</p>
+        <hr>
+        <p><b>Игровой сервер:</b> Выбор сервера, статус которого будет отображаться в главном окне программы.</p>
+
+
+        <div class="page-header">
+          <h2 id="nav_settings_launcher"><small>Расширенные</small></h2>
+        </div>
+
+        <p><b>Файл параметров:</b> В поле отображен путь к файлу настроек лаунчера, который создается автоматически при
+          первом запуске. Кнопка справа позволяет открыть в проводнике папку с файлом.
+
+          <hr>
+
+          <p><b>Сайт мониторинга:</b> Выбор с какого сайта получать статус сервера.
+
+            <hr>
+
+            <p><b>После запуска:</b> Позволяет выбрать поведение лаунчера после запуска игры.</p>
+
+            <hr>
+
+            <p><b>Быстрый запуск:</b> При включении, игра будет запускается через 3 секунды после запуска лаунчера.
+              Лаунчер запускается свернутым, по этому если понадобиться остановить отсчет, можно развернуть его, и в
+              строке уведомлений будет отсчет до запуска, нажатием на кнопку можно остановить/возобновить таймер. </p>
+            <hr>
+            <p><b>Авто. Проверка обновлений:</b> При включении, обновления лаунчера будут проверятся автоматически, и в
+              главном окне, в строке уведомлений, будет написано оповещение о новой версии.</p>
+            <hr>
+            <p><b>Предупреждение о рестарте:</b> Включение функции предупреждения о рестарте, которое будет
+              отображаться в строке уведомлений в главном окне.</p>
+            <hr>
+            <p><b>Показывать пинг:</b> Включение функции отображения пинга.</p>
+
+            <div class="page-header">
+              <h2 id="nav_FAQ">Часто задаваемые вопросы</h2>
+            </div>
+
+            <div id="tableFAQ">
+
+              <table id="nav_faq_first" class="table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <p><b>В:</b> Меня волнует безопасность введенных данных от игрового аккаунта в лаунчере.
+                        <br><b>О:</b> Ваши данные никому не передаются, программа полностью безопасна. В этом можно
+                        лично убедиться, так как исходные коды находятся в открытом доступе на <a href="https://github.com/Sigmanor/Aion-Game-Launcher"
+                          target="_blank">GitHub</a>.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <p><b>В:</b> Почему в лаунчере показывает что сервер работает, но в игру не заходит.
+                        <br><b>О:</b> Информация берется из сторонних сайтов: <a href="http://aion.im/server-status/"
+                          target="_blank">aion.im</a>, <a href="http://aionstatus.net/" target="_blank">aionstatus.net</a>,
+                        <a href="http://aion.mouseclic.com/tool/status/" target="_blank">aion.mouseclic.com</a>, смотря
+                        что выбрано в настройках, по этому все вопросы к разработчикам данных ресурсов.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <p><b>В:</b> Почему пинг в лаунчере отличаеться от пинга в игре?
+                        <br><b>О:</b> В лаунчере идет проверка пинга к IP адресу сервера через командную строку
+                        напрямую, и многие маршруты не учитываются.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <p><b>В:</b> У меня не запускается игра/лаунчер/показывает какую то ошибку.
+                        <br><b>О:</b> Для начала нужно попробовать запустить игру через <b>официальный лаунчер</b>,
+                        если ошибка останется, то проблемы не в лаунчере, если же ошибки нет, то попробуйте следующие
+                        решения:</p>
+                      <p><b>1)</b> выбрать в <a href="#nav_settings">настройках</a> другую разрядность;</p>
+                      <p><b>2)</b> убедиться что ваша система соответствует системным требованиям;</p>
+                      <p><b>3)</b> попробовать <a href="#nav_settings">сбросить</a> настройки лаунчера на исходные;</p>
+                      <p><b>4)</b> если ничего не помогло, то напишите мне (контакты есть в шапке сайта), приложив
+                        скриншот ошибки.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+            <div class="page-header">
+              <h2 id="nav_more_questions">Остались вопросы?</h2>
+            </div>
+            <p>В данном руководстве по возможности были охвачены все аспекты работы программы. Если у вас все же
+              остались какие то вопросы, или есть предложения по улучшению программы, то пишите, мои контакты есть в
+              шапке сайта.
+
+              <br><br>
+
       </div>
     </div>
+  </div>
 
-<div class="push-it container">
-
-  <div class="row">
-
-<div class="col-md-4 bs-docs-sidebar">
-
- <ul id="sidebar" class="nav nav-stacked fixed">
-
-            <li>
-                <a href="#nav_install">Установка и первый запуск</a>
-            </li>
-
-            <li>
-                <a href="#nav_screenshots">Скриншоты</a>
-            </li>
-
-            <li>
-                <a href="#nav_start">Подготовка к работе</a>
-                <ul class="nav nav-stacked">
-                    <li><a href="#nav_manage_account">Управление аккаунтами</a></li>
-                    <li><a href="#nav_more">Дополнительно</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="#nav_settings">Настройки лаунчера</a>
-                <ul class="nav nav-stacked">
-                    <li><a href="#nav_settings_game">Общие</a></li>
-                    <li><a href="#nav_settings_launcher">Расширенные</a></li>
-                </ul>
-           </li>
-
-           <li>
-                <a href="#nav_FAQ">Часто задаваемые вопросы</a>
-           </li>
-
-           <li>
-                <a href="#nav_more_questions">Остались вопросы?</a>
-           </li>
-
-           <li>
-           <hr>
-                <a href="#">Наверх</a>
-           </li>
-
- </ul>
-
-</div>
-
-<div class="col-md-8">
-
-<div class="page-header">
-  <h2 id="nav_install">Установка и первый запуск</h2>
-</div>
-
-<p>Архив с программой можно распаковать в любую удобную для вас директорию. Для удачного запуска потребуется <b>Windows XP SP3 и выше</b>. При первом запуске нужно выбрать язык программы, потом откроется окно с Лицензионным соглашением, для дальнейшей работы необходимо нажать кнопку принять. Это стандартная MIT лицензия, с русским переводом можно ознакомиться например <a href="https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F_MIT" target="_blank">тут</a>.</p>
-
-<p><b>Внимание!</b> Лаунчер не умеет скачивать или обновлять игру.</p>
-
-
-<div class="page-header">
-  <h2 id="nav_screenshots">Скриншоты</h2>
-</div>
-
-<img class="shadowBorder" src="../img/screenshot-1.png" alt="Главное окно">
-
-<hr>
-
-<img class="shadowBorder" src="../img/screenshot-2.png" alt="Настройки">
-<hr>
-
-
-  <img class="shadowBorder" src="../img/screenshot-3.png" alt="О Программе">
-
-<hr>
-
-<div class="page-header">
-  <h2 id="nav_start">Подготовка к работе</h2>
-</div>
-
-<p>При первом запуске, путь к игре будет найден автоматически (при наличии  установленного официального ланучера). Если по какой то причине этого не случилось, то необходимо зайти в <b>Меню > Настройки</b> в пункте <b>Папка с игрой</b> нажать на кнопку с изображением папки, и выбрать папку с игрой. После этого лаунчер готов к запуску игры.</p>
-
-
-<div class="page-header">
-<h2 id="nav_manage_account"><small>Управление несколькими аккаунтами</small></h2>
-</div>
-
-<p>Для удобства, что бы каждый раз не вводить логин/пароль, можно ввести их  в главном окне лаунчера, и поставить галочку на <b>Сохранить</b>. Так же есть возможность сохранить несколько аккаунтов, для этого в поле ввода логина в выпадающем списке нужно выбрать пустую область, и ввести в поля данные второго аккаунта, поставить галочку на <b>Сохранить</b>, теперь из выпадающего списка можно выбрать несколько аккаунтов для игры. Таким способом можно добавить бесконечное количество аккаунтов. Так же можно редактировать уже существующие данные, для этого из выпадающего списка нужно выбрать нужный аккаунт, отредактировать данные в полях, и поставте галочку на <b>Сохранить</b>. Удаление аккаунтов из лаунчера на данный момент не возможно.
-
-<a href="#nav_faq_first">Волнует безопасность данной функции?</a> </p>
-
-
-<div class="page-header">
-<h2 id="nav_more"><small>Дополнительно</small></h2>
-</div>
-<p>Для того что бы узнать что скрывается в поле пароля, нужно справа нажать на кнопку с изображением глаза. Для того что бы узнать больше информации о программе, или вручную обновить, необходимо зайти в <b>Меню > Помощь</b>. Так же, в <b>Меню > Дополнительно</b> можно запустить официальный лаунчер. Слайдер в главном окне взят из официального лаунчера, с помощью кнопок ниже можно перейти на интересные ресурсы посвященные Американскому серверу Aion.</p>
-
-<div class="page-header">
-  <h2 id="nav_settings">Настройки лаунчера</h2>
-
-</div>
-
-<div class="page-header">
-  <h2 id="nav_settings_game"><small>Общие</small></h2>
-</div>
-
-<p><b>Папка с игрой:</b> Выбор папки с установленной игрой, нужно выбирать корневую папку.</p>
-<hr>
-<p><b>Доп. Параметры:</b> Поле для ввода дополнительных параметров запуска игры, указывать через пробел. Некоторые параметры с описанием:</p>
-<ul>
-<li><b>-ncping</b> включает функцию NCPing в настройках игры.</li>
-<li><b>-megaphone</b> включает мировой чат.</li>
-<li><b>-nowebshop</b> отключает отображение иконки внутриигрового магазина.</li>
-</ul>
-<hr>
-<p><b>Разрядность:</b> Выбор разрядности  игрового клиента.</p>
-<hr>
-<p><b>Язык лаунчера:</b> Выбор языка программы.</p>
-<hr>
-<p><b>Игровой сервер:</b> Выбор сервера, статус которого будет отображаться в главном окне программы.</p>
-
-
- <div class="page-header">
-  <h2 id="nav_settings_launcher"><small>Расширенные</small></h2>
-</div>
-
-  <p><b>Файл параметров:</b> В поле отображен путь к файлу настроек лаунчера, который создается автоматически при первом запуске. Кнопка справа позволяет открыть в проводнике папку с файлом.
-
-<hr>
-
-  <p><b>Сайт мониторинга:</b> Выбор с какого сайта получать статус сервера.
-
-<hr>
-
-  <p><b>После запуска:</b> Позволяет выбрать поведение лаунчера после запуска игры.</p>
-
-<hr>
-
-  <p><b>Быстрый запуск:</b> При включении, игра будет запускается через 3 секунды после запуска лаунчера. Лаунчер запускается свернутым, по этому если понадобиться остановить отсчет, можно развернуть его, и в строке уведомлений будет отсчет до запуска, нажатием на кнопку можно остановить/возобновить таймер. </p>
-<hr>
-  <p><b>Авто. Проверка обновлений:</b> При включении, обновления лаунчера будут проверятся автоматически, и в главном окне, в строке уведомлений, будет написано оповещение о новой версии.</p>
-<hr>
-  <p><b>Предупреждение о рестарте:</b> Включение функции предупреждения о рестарте, которое будет отображаться в строке уведомлений в главном окне.</p>
- <hr>
-  <p><b>Показывать пинг:</b> Включение функции отображения пинга.</p>
-
-<div class="page-header">
-  <h2 id="nav_FAQ">Часто задаваемые вопросы</h2>
-</div>
-
-<div id="tableFAQ">
-
-<table id="nav_faq_first" class="table"><tbody><tr><td>
-<p><b>В:</b> Меня волнует безопасность введенных данных от игрового аккаунта в лаунчере.
-<br><b>О:</b> Ваши данные никому не передаются, программа полностью безопасна. В этом можно лично убедиться, так как исходные коды находятся в открытом доступе на <a href="https://github.com/Sigmanor/Aion-Game-Launcher" target="_blank">GitHub</a>.</p>
-</td></tr></tbody></table>
-
-<table class="table"><tbody><tr><td>
-<p><b>В:</b> Почему в лаунчере показывает что сервер работает, но в игру не заходит.
-<br><b>О:</b> Информация берется из сторонних сайтов: <a href="http://aion.im/server-status/" target="_blank">aion.im</a>, <a href="http://aionstatus.net/" target="_blank">aionstatus.net</a>, <a href="http://aion.mouseclic.com/tool/status/" target="_blank">aion.mouseclic.com</a>, смотря что выбрано в настройках, по этому все вопросы к разработчикам данных ресурсов.</p>
-</td></tr></tbody></table>
-
-<table class="table"><tbody><tr><td>
-<p><b>В:</b> Почему пинг в лаунчере отличаеться от пинга в игре?
-<br><b>О:</b> В лаунчере идет проверка пинга к IP адресу сервера через командную строку напрямую, и многие маршруты не учитываются.</p>
-</td></tr></tbody></table>
-
-<table class="table"><tbody><tr><td>
-<p><b>В:</b> У меня не запускается игра/лаунчер/показывает какую то ошибку.
-<br><b>О:</b> Для начала нужно попробовать запустить игру через <b>официальный лаунчер</b>, если ошибка останется, то проблемы не в лаунчере, если же ошибки нет, то попробуйте следующие решения:</p>
-<p><b>1)</b> выбрать в <a href="#nav_settings">настройках</a> другую разрядность;</p>
-<p><b>2)</b> убедиться что ваша система соответствует системным требованиям;</p>
-<p><b>3)</b> попробовать <a href="#nav_settings">сбросить</a> настройки лаунчера на исходные;</p>
-<p><b>4)</b> если ничего не помогло, то напишите мне (контакты есть в шапке сайта), приложив скриншот ошибки.</p>
-</td></tr></tbody></table>
-
-</div>
-
-<div class="page-header">
-  <h2 id="nav_more_questions">Остались вопросы?</h2>
-</div>
-<p>В данном руководстве по возможности были охвачены все аспекты работы программы. Если у вас все же остались какие то вопросы, или есть  предложения по улучшению программы, то пишите, мои контакты есть в шапке сайта.
-
-<br><br>
-
-</div>
-</div>
-</div>
-
-<div id="footerIEfix"></div>
-    <div id="footer">
-      <div class="container">
-        <p><small>2016 &middot; <a href="/">Sigmanor</a> &middot; Built on <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> v3.3.6</small></p>
-        <!-- <p><small>Aion™ is a copyright of NC Interactive, Inc. Aion Game Launcher and sigmanor.tk is not in any way affiliated with NC Interactive, Inc. or Gameforge Productions GmbH.</small></p> -->
-      </div>
-</div>
+  <div id="footerIEfix"></div>
+      <div id="footer">
+        <div class="container">
+          <p><small>2016 &middot; <a href="/">Sigmanor</a> &middot; Built on <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> v3.3.6</small></p>
+          <!-- <p><small>Aion™ is a copyright of NC Interactive, Inc. Aion Game Launcher and sigmanor.tk is not in any way affiliated with NC Interactive, Inc. or Gameforge Productions GmbH.</small></p> -->
+        </div>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/main.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="../js/agl.min.js"></script>
 
 
-  </body>
+</body>
+
 </html>
