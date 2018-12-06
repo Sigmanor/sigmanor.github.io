@@ -1,129 +1,162 @@
-/*IE footer FIX*/
-if (!!navigator.userAgent.match(/Trident\/7\./))
-    $(function () {
-        $(window).scroll(function () {
-            var distanceTop = $('#footerIEfix').offset().top - $(window).height();
-            if ($(window).scrollTop() > distanceTop) {
-                document.getElementById('footer').style.position = "fixed";
-            }
-            if ($(window).scrollTop() < distanceTop) {
-                document.getElementById('footer').style.position = "absolute";
-            }
-        });
-    });
-/*IE footer FIX*/
-
-
-/* Randomize background */
-// var images = [
-// '../img/bg1.png',
-// '../img/bg2.jpg',
-// '../img/bg3.jpg',
-// '../img/bg4.png',
-// '../img/bg5.png',
-// '../img/bg6.png',
-// '../img/bg7.png',
-// '../img/bg8.png'
-// ];
-// $('#main-page').css({'background-image': 'url(../img/' + images[Math.floor(Math.random()*images.length)] + ')'});
-/* Randomize background */
-
-/*DropDown pos*/
-var mq = window.matchMedia("(max-width: 991px)");
-
-if (mq.matches) {
-    // window width is at least 500px
-    document.getElementById('drop-right').className += ' rightMenu'
+// User Commands
+function echo(...a) {
+  return a.join(' ')
 }
-/*DropDown pos*/
+echo.usage = "echo arg [arg ...]"
+echo.doc = "Echos to output whatever arguments are input"
 
 
-
-/*manual*/
-$('body').scrollspy({
-    target: '.bs-docs-sidebar',
-    offset: 40
-});
-/*manual*/
-
-/*modal*/
-$('#myModal').bind('hidden.bs.modal', function () {
-    $("html").css("margin-right", "0px");
-});
-$('#myModal').bind('show.bs.modal', function () {
-    $("html").css("margin-right", "0px");
-});
-/*modal*/
-
-/*modal download*/
-if (window.location.hash == "#more") {
-    $('#myModal').modal('show');
-}
-/*modal download*/
-
-
-
-
-/* cookie  */
-
-if (!!navigator.userAgent.match(/Trident\/7\./)) {
-    document.getElementById('iep').style.display = "block";
+function projects() {
+  return ('github: https://github.com/Sigmanor')
 }
 
-function displayCookie() {
-    alert(document.cookie);
+function contacts() {
+  return ('facebook - https://www.fb.com/SlGMANOR' + '\n' +
+    'telegram - https://t.me/Sigmanor' + '\n' +
+    'email - sigmanor@pm.me')
 }
 
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+function about() {
+  return ('Fork of an original work by Matt Cowley:' + '\n' +
+    'https://codepen.io/MattCowley/pen/jqBbdG' + '\n' +
+    'Licence:' + '\n' +
+    'https://raw.githubusercontent.com/Sigmanor/sigmanor.github.io/master/LICENSE')
+
+
+}
+
+var cmds = {
+  projects,
+  contacts,
+  about,
+  clear,
+  echo,
+  help,
+}
+
+/*
+ * * * * * * * * USER INTERFACE * * * * * * *
+ */
+
+function clear() {
+  $("#outputs").html("")
+}
+clear.usage = "clear"
+clear.doc = "Clears the terminal screen"
+
+function help(cmd) {
+  if (cmd) {
+    let result = ""
+    let usage = cmds[cmd].usage
+    let doc = cmds[cmd].doc
+    result += (typeof usage === 'function') ? usage() : usage
+    result += "\n"
+    result += (typeof doc === 'function') ? doc() : doc
+    return result
+  } else {
+    let result = "**Commands:**\n\n"
+    print = Object.keys(cmds)
+    for (let p of print) {
+      result += "- " + p + "\n"
     }
-    return "";
+    return result
+  }
+}
+help.usage = () => "help [command]"
+help.doc = () => "Without an argument, lists available commands. If used with an argument displays the usage & docs for the command."
+
+// Set Focus to Input
+$('.console').click(function () {
+  $('.console-input').focus()
+})
+
+// Display input to Console
+function input() {
+  var cmd = $('.console-input').val()
+  $("#outputs").append("<div class='output-cmd'>" + cmd + "</div>")
+  $('.console-input').val("")
+  autosize.update($('textarea'))
+  $("html, body").animate({
+    scrollTop: $(document).height()
+  }, 300);
+  return cmd
 }
 
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    var expires = "expires=" + d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
+// Output to Console
+function output(print) {
+  var md = new Remarkable({
+    breaks: true,
+    linkify: true,
+    linkTarget: true
+  });
+
+  $("#outputs").append(md.render(print))
+  $(".console").scrollTop($('.console-inner').height());
 }
 
-function set1() {
-    setCookie("wbm", "1", 9999);
-    document.getElementById('iep').style.display = "block";
-}
+// Break Value
+var newLine = "<br/> &nbsp;";
 
-function set0() {
-    setCookie("wbm", "0", 9999);
-    document.getElementById('iep').style.display = "none";
-}
+autosize($('textarea'))
 
-function checkCookie() {
-    var coo = getCookie("wbm");
-    if (coo == "1") {
-        alert("1");
-        document.getElementById('iep').style.display = "block";
+var cmdHistory = []
+var cursor = -1
+
+// Get User Command
+$('.console-input').on('keydown', function (event) {
+  if (event.which === 38) {
+    // Up Arrow
+    cursor = Math.min(++cursor, cmdHistory.length - 1)
+    $('.console-input').val(cmdHistory[cursor])
+  } else if (event.which === 40) {
+    // Down Arrow
+    cursor = Math.max(--cursor, -1)
+    if (cursor === -1) {
+      $('.console-input').val('')
     } else {
-        alert("0");
-        document.getElementById('iep').style.display = "none";
+      $('.console-input').val(cmdHistory[cursor])
     }
-}
+  } else if (event.which === 13) {
+    event.preventDefault();
+    cursor = -1
+    let text = input()
+    let args = getTokens(text)[0]
+    let cmd = args.shift().value
+    args = args.filter(x => x.type !== 'whitespace').map(x => x.value)
+    cmdHistory.unshift(text)
+    if (typeof cmds[cmd] === 'function') {
+      let result = cmds[cmd](...args)
+      if (result === void(0)) {
+        // output nothing
+      } else if (result instanceof Promise) {
+        result.then(output)
+      } else {
+        console.log(result)
+        output(result)
+      }
+    } else if (cmd.trim() === '' ) {
+      output('')
+    } else {
+      output("Command not found: `" + cmd + "`")
+      output("Use 'help' for list of commands.")
+    }
 
-function hideMsg() {
-    setCookie("wbm", "0", 9999);
-    document.getElementById('iep').style.display = "none";
-}
+    if (cmd.trim() === 'easteregg') {
+      console.log('Wow, you found an easter egg, congratulations, now you can tell your friends how clever you are :) You can click this link, and I will also find out about it http://bit.ly/8oqSuiUnNDcTBL160hmTACShEUoqH9uFIChMolipEm8N1NEPkuyayjQ Who knows, maybe this link is another easter egg?')
+    } 
+    
+  }
+});
 
-var coo = getCookie("wbm");
-if (coo == "1") {
-    document.getElementById('iep').style.display = "block";
-}
-if (coo == "0") {
-    document.getElementById('iep').style.display = "none";
-}
+$(document).ready(function () {
+  $(".console-input").keypress(function (event) {
+    var inputValue = event.which;
+    // allow letters and whitespaces only.
+    if (!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)) {
+      event.preventDefault();
+    }
+  });
+});
 
-/* cookie  */
+//ParticlesBG
+particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":false,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);
