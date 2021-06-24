@@ -34,7 +34,7 @@ function user() {
   });
 }
 user.usage = ""
-user.doc = "All I can know about you (but i swear I will don't remember this data)"
+user.doc = "All I can know about you (but I swear I will don't remember this data)"
 
 function about() {
   return ('My name is Alexander, I`m from Ukraine. One of my hobbies is Programming.' + '\n' +
