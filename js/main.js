@@ -5,16 +5,19 @@ function echo(...a) {
 echo.usage = "echo arg [arg ...]"
 echo.doc = "Echos to output whatever arguments are input"
 
-
 function projects() {
   return ('github: https://github.com/Sigmanor')
 }
+projects.usage = "projects"
+projects.doc = "List of my projects"
 
 function contacts() {
   return ('facebook - https://www.fb.com/SlGMANOR' + '\n' +
     'telegram - https://t.me/Sigmanor' + '\n' +
     'email - sigmanor@pm.me')
 }
+contacts.usage = "contacts"
+contacts.doc = "How can you contact me"
 
 function about() {
   return ('Hey. My name is Alexander, I`m from Ukraine. One of my hobbies is Programming.' + '\n' +
@@ -26,22 +29,9 @@ function about() {
     ' ' + '\n' +
     'Licence:' + '\n' +
     'https://raw.githubusercontent.com/Sigmanor/sigmanor.github.io/master/LICENSE')
-
-
 }
-
-var cmds = {
-  projects,
-  contacts,
-  about,
-  clear,
-  echo,
-  help,
-}
-
-/*
- * * * * * * * * USER INTERFACE * * * * * * *
- */
+about.usage = "about"
+about.doc = "A little bit about me and this website"
 
 function clear() {
   $("#outputs").html("")
@@ -67,8 +57,21 @@ function help(cmd) {
     return result
   }
 }
-help.usage = () => "help [command]"
-help.doc = () => "Without an argument, lists available commands. If used with an argument displays the usage & docs for the command."
+help.usage = "help [command]"
+help.doc = "Without an argument, lists available commands. If used with an argument displays the usage & docs for the command."
+
+var cmds = {
+  projects,
+  contacts,
+  about,
+  clear,
+  echo,
+  help,
+}
+
+/*
+ * * * * * * * * USER INTERFACE * * * * * * *
+ */
 
 // Set Focus to Input
 $('.console').click(function () {
@@ -77,7 +80,7 @@ $('.console').click(function () {
 
 // Display input to Console
 function input() {
-  var cmd = $('.console-input').val()
+  var cmd = $('.console-input').val() + " "
   $("#outputs").append("<div class='output-cmd'>" + cmd + "</div>")
   $('.console-input').val("")
   autosize.update($('textarea'))
@@ -131,7 +134,7 @@ $('.console-input').on('keydown', function (event) {
     cmdHistory.unshift(text)
     if (typeof cmds[cmd] === 'function') {
       let result = cmds[cmd](...args)
-      if (result === void(0)) {
+      if (result === void (0)) {
         // output nothing
       } else if (result instanceof Promise) {
         result.then(output)
