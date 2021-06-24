@@ -12,30 +12,34 @@
   <link rel="stylesheet" href="style/main.min.css">
 </head>
 
-<body>
-
-  <body id="particles-js">
-    <div class='console'>
-      <div class='console-inner'>
-        <p>Personal website [Version 1.0.0.0]</p>
-        <p>(c) Sigmanor, 2021. All rights reserved.</p>
-        <p>Hello, my name is Alexander, and I'm trying to coding here.</p>
-        <p>Want to know more about me? Just type "help" command.</p>
-        <div id="outputs">
-        </div>
-        <div class='output-cmd'><textarea autofocus class='console-input'></textarea></div>
+<body id="particles-js">
+  <div class='console'>
+    <div class='console-inner'>
+      <p>Personal website [Version 1.0.0.0]
+        <br>(c) Sigmanor, <span id="currentYear"></span>. All rights reserved.
+      </p>
+      <p>Hello stranger. Want to know more about me? Just type <strong>"about"</strong> command. </p>
+      <p>Also you can type <strong>"help"</strong> to get lists of all available commands.</p>
+      <div id="outputs">
+      </div>
+      <div class='output-cmd'><input autofocus maxlength="30" class='console-input'></input>
       </div>
     </div>
-  </body>
-
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/autosize.js/3.0.18/autosize.min.js'></script>
-  <script src='http://unpkg.com/@wmhilton/cli-parser@1.1.0'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
-  <script src="js/main.min.js"></script>
-
+  </div>
 </body>
+
+<script>
+  document.getElementById('currentYear').innerHTML = `${new Date().getFullYear()}`;
+</script>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/autosize.js/3.0.18/autosize.min.js'></script>
+<script src='http://unpkg.com/@wmhilton/cli-parser@1.1.0'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
+<script src="js/main.min.js"></script>
+
+
 
 </html>

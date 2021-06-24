@@ -16,7 +16,8 @@ body {
   /*width: calc(100% - 3em);*/
   width: 100%;
   max-width: 100%;
-  max-height: calc(100% - 3em);
+  /* max-height: calc(100% - 3em); */
+  max-height: 100%;
   overflow-y: auto;
   /*margin: 1em 1em;*/
   /*padding-top: 0.5em;*/
@@ -42,23 +43,23 @@ body {
   appearance: none;
   /*min-width: calc(100% - 2em);*/
   resize: none;
-  width: 90%;
+  width: 50%;
 }
 
 .console-input:before {
-  content: '> ';
-  color: #ff2b2b;
+  content: 'C:\\Users\\sigmanor>';
+  color: #d1ae12;
   vertical-align: top;
 }
 
 .output-cmd:before {
-  content: '> ';
-  color: #ff2b2b;
+  content: 'C:\\Users\\sigmanor>';
+  color: #d1ae12;
   vertical-align: top;
 }
 
 .output-text:before {
-  content: '> ';
+  content: 'C:\\Users\\sigmanor>';
   color: #5F8787;
   font-weight: 600 !important;
   vertical-align: top;
@@ -94,9 +95,9 @@ code {
   opacity: 0.8;
   text-decoration: none;
 }
-
+ 
 #outputs a {
-  color: #eadd3b;
+  color: #3281db;
   opacity: 0.8;
   text-decoration: underline;
   word-wrap: break-word;

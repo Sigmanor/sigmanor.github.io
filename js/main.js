@@ -8,7 +8,7 @@ echo.doc = "Echos to output whatever arguments are input"
 function projects() {
   return ('github: https://github.com/Sigmanor')
 }
-projects.usage = "projects"
+projects.usage = ""
 projects.doc = "List of my projects"
 
 function contacts() {
@@ -16,27 +16,44 @@ function contacts() {
     'telegram - https://t.me/Sigmanor' + '\n' +
     'email - sigmanor@pm.me')
 }
-contacts.usage = "contacts"
+contacts.usage = ""
 contacts.doc = "How can you contact me"
 
+
+const getUserInformation = new Promise((resolve, reject) => {
+  let apiKey = '44853bfc7d424428ab97f0d16c43ac7c';
+  $.getJSON('https://ipgeolocation.abstractapi.com/v1/?api_key=' + apiKey, function (data) {
+    resolve(JSON.stringify(data, null, 1));
+  });
+});
+
+function user() {
+  return getUserInformation.then((value) => {
+    return value.replace(/(?:,|"|{|})/g, '').replace("security:", "\n[security]").replace("ip_address:", "[location]\nip_address:").replace("timezone:", "[timezone]").replace("flag:", "[flag]").replace("currency:", "[currency]").replace("connection:", "[connection]");
+    // .replace(/{/g, '').replace(/}/g, '').replace(/"/g, '');
+  });
+}
+user.usage = ""
+user.doc = "All I can know about you (but i swear I will don't remember this data)"
+
 function about() {
-  return ('Hey. My name is Alexander, I`m from Ukraine. One of my hobbies is Programming.' + '\n' +
+  return ('My name is Alexander, I`m from Ukraine. One of my hobbies is Programming.' + '\n' +
     'You can look to my github page https://github.com/Sigmanor' + '\n' +
     'Maybe you will find there something interesting.' + '\n' +
     ' ' + '\n' +
-    'Created using:' + '\n' +
+    'This website was created using:' + '\n' +
     'https://codepen.io/MattCowley/pen/jqBbdG' + '\n' +
     ' ' + '\n' +
     'Licence:' + '\n' +
     'https://raw.githubusercontent.com/Sigmanor/sigmanor.github.io/master/LICENSE')
 }
-about.usage = "about"
+about.usage = ""
 about.doc = "A little bit about me and this website"
 
 function clear() {
   $("#outputs").html("")
 }
-clear.usage = "clear"
+clear.usage = ""
 clear.doc = "Clears the terminal screen"
 
 function help(cmd) {
@@ -64,6 +81,7 @@ var cmds = {
   projects,
   contacts,
   about,
+  user,
   clear,
   echo,
   help,
@@ -80,7 +98,7 @@ $('.console').click(function () {
 
 // Display input to Console
 function input() {
-  var cmd = $('.console-input').val() + " "
+  var cmd = $('.console-input').val()
   $("#outputs").append("<div class='output-cmd'>" + cmd + "</div>")
   $('.console-input').val("")
   autosize.update($('textarea'))
@@ -124,7 +142,7 @@ $('.console-input').on('keydown', function (event) {
     } else {
       $('.console-input').val(cmdHistory[cursor])
     }
-  } else if (event.which === 13) {
+  } else if (event.keyCode == 13) {
     event.preventDefault();
     cursor = -1
     let text = input()
@@ -157,13 +175,13 @@ $('.console-input').on('keydown', function (event) {
 });
 
 $(document).ready(function () {
-  $(".console-input").keypress(function (event) {
-    var inputValue = event.which;
-    // allow letters and whitespaces only.
-    if (!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)) {
-      event.preventDefault();
-    }
-  });
+  // $(".console-input").keypress(function (event) {
+  // var inputValue = event.which;
+  // allow letters and whitespaces only.
+  // if (!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)) {
+  //   event.preventDefault();
+  // }
+  // });
 });
 
 //ParticlesBG
