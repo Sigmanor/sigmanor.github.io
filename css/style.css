@@ -18,7 +18,7 @@ body {
 .prompt-wrapper {
   align-items: center;
   display: flex;
-  height: 43px;
+  height: 2.69em;
   padding: 0 10px;
   width: 100%;
 }
@@ -92,23 +92,32 @@ a:visited {
   color: #6279bb;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 1000px) {
   .wrapper {
-    padding: 10px;
+    font-size: 40px;
   }
 
   .output-wrapper {
-    font-size: 24px;
+    font-size: 40px;
   }
 
   .input {
     width: 100%;
-    font-size: 24px;
+    font-size: 40px;
+    padding: 0 0 0 0.4em;
   }
 
-  * {
-    font-size: 24px;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+  img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .uaFlag {
+    height: 50px;
+    width: 50px;
+  }
+
+  .prompt-wrapper {
+    height: 3.45em;
   }
 }

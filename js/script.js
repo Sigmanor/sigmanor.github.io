@@ -73,7 +73,7 @@ function executeCommand(command) {
             break;
         case 'about'://
             appendOutput(`<br>👋 My name is Oleksandr, this is my personal website that features a design inspired by a terminal interface.<br>`);
-            appendOutput('<br>I\`m from <strong>Ukraine</strong> <a href="https://stand-with-ukraine.pp.ua" target="_blank"><img style="vertical-align: bottom;" width="21" height="21" src="./assets/ukraine.png" alt="UA"></a> and developing cool things is both my primary profession and one of my passions.');
+            appendOutput('<br>I\`m from <strong>Ukraine</strong> <a href="https://stand-with-ukraine.pp.ua" target="_blank"><img class="uaFlag" style="vertical-align: bottom;" width="21" height="21" src="./assets/ukraine.png" alt="UA"></a> and developing cool things is both my primary profession and one of my passions.');
             appendOutput('<br>If you\'re interested, my GitHub page can be found <a href="https://github.com/Sigmanor" target="_blank">here</a>.');
             createPrompt();
             break;
