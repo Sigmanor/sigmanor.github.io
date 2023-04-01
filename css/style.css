@@ -103,5 +103,12 @@ a:visited {
 
   .input {
     width: 100%;
+    font-size: 24px;
+  }
+
+  body {
+    font-size: 24px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 }
