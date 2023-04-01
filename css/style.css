@@ -1,0 +1,93 @@
+body {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.prompt-wrapper {
+  align-items: center;
+  display: flex;
+  height: 43px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.prompt {
+  padding-right: 6px;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  color: #c5c8c6;
+  font-size: 16px;
+  outline: none;
+  padding: 0 0 0 0.2em;
+  width: calc(100% - 70px);
+  font-family: 'Roboto Mono', monospace;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.caret {
+  animation: blink-caret 1s step-end infinite;
+  border-right: 2px solid #c5c8c6;
+  height: 20px;
+  margin-left: 10px;
+  width: 2px;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #c5c8c6;
+  }
+}
+
+.output-wrapper {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+  font-size: 16px;
+  overflow-y: auto;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.command {
+  color: #8be9fd;
+}
+
+.message {
+  margin-top: 10px;
+}
+
+.welcome-message {
+  font-weight: bold;
+  user-select: none;
+}
+
+.about-section {
+  margin-bottom: 10px;
+}
+
+a:link,
+a:visited {
+  color: #6279bb;
+}

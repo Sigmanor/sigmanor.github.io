@@ -1,45 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Sigmanor</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#000000">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
-  <title>Sigmanor</title>
-  <link rel="stylesheet" href="style/main.min.css">
+    <title>Sigmanor</title>
+    <meta charset="UTF-8">
+    <link href="./assets/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body id="particles-js">
-  <div class='console'>
-    <div class='console-inner'>
-      <p>Personal website [Version 1.0.0.0]
-        <br>(c) Sigmanor, <span id="currentYear"></span>. All rights reserved.
-      </p>
-      <p>Hello stranger. Want to know more about me? Just type <strong>"about"</strong> command. </p>
-      <p>Also you can type <strong>"help"</strong> to get lists of all available commands.</p>
-      <div id="outputs">
-      </div>
-      <div class='output-cmd'><input autofocus maxlength="30" class='console-input'></input>
-      </div>
+<body>
+    <div class="wrapper">
+        <div class="output-wrapper">
+            <div class="welcome-message"></div>
+            <div class="about-section">
+                <p>Hello there 😏 Want to know what this all about for 🤔 Just type the <strong>"about"</strong>command
+                </p>
+                <p>Also, you can type <strong>"help"</strong> to get a list of all available commands</p>
+            </div>
+        </div>
+        <div class="prompt-wrapper">
+            <div class="prompt">sigmanor@website:~$ </div>
+            <input type="text" class="input" maxlength="100">
+        </div>
     </div>
-  </div>
+
+    <script src="./js/script.js"></script>
 </body>
-
-<script>
-  document.getElementById('currentYear').innerHTML = `${new Date().getFullYear()}`;
-</script>
-
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/autosize.js/3.0.18/autosize.min.js'></script>
-<script src='http://unpkg.com/@wmhilton/cli-parser@1.1.0'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
-<script src="js/main.min.js"></script>
-
-
 
 </html>
