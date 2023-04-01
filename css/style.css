@@ -91,3 +91,17 @@ a:link,
 a:visited {
   color: #6279bb;
 }
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    padding: 10px;
+  }
+
+  .about-section p {
+    font-size: 14px;
+  }
+
+  .input {
+    width: 100%;
+  }
+}
