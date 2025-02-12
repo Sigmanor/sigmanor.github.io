@@ -82,10 +82,10 @@ function executeCommand(command) {
       createPrompt();
       break;
     case 'contacts':
-      const telegram = '<a title="telegram" href="https://t.me/sigmanor" target="_blank"><img src="./assets/telegram.svg" alt="telegram"></a>';
+      const x = '<a title="x" href="https://x.com/sigmanor" target="_blank"><img width="45" height="45" src="./assets/x.png" alt="x"></a>';
       const linkedin = '<a title="linkedin" href="https://www.linkedin.com/in/oleksandr-panchenko-5a88a721a" target="_blank"><img src="./assets/linkedin.svg" alt="linkedin"></a>';
       const email = '<a title="email" href="mailto:sigmanor@pm.me" target="_blank"><img src = "./assets/mail.png" alt="linkedin"></a>';
-      appendOutput(`<br> ${telegram} ${linkedin} ${email}`);
+      appendOutput(`<br> ${x} ${linkedin} ${email}`);
       createPrompt();
       break;
     default:
