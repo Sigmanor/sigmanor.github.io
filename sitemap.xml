@@ -4,9 +4,16 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<!-- updated on 11 May 2025 -->
 
 <url>
-  <loc>http://sigmanor.net/</loc>
+  <loc>https://sigmanor.net/</loc>
+  <lastmod>2025-05-11T00:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://sigmanor.net/404.html</loc>
+  <lastmod>2025-05-11T00:00:00+00:00</lastmod>
+  <priority>0.50</priority>
 </url>
 </urlset>
