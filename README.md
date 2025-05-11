@@ -67,5 +67,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 - Twitter: [@sigmanor](https://x.com/sigmanor)
-- LinkedIn: [Oleksandr Panchenko](https://www.linkedin.com/in/oleksandr-panchenko-5a88a721a)
+- LinkedIn: [Oleksandr Panchenko](https://www.linkedin.com/in/sigmanor/)
 - Email: sigmanor@pm.me
