@@ -6,7 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sigmanor - Links</title>
   <meta name="description" content="Всі важливі посилання Sigmanor">
-  <link rel="stylesheet" href="links.css">
+  <link href="../assets/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  
+  <!-- Cache Control Meta Tags -->
+  <meta http-equiv="Cache-Control" content="public, max-age=3600, must-revalidate">
+  <meta http-equiv="Pragma" content="cache">
+  <meta http-equiv="Expires" content="3600">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="links.css?v=1.0.0" as="style">
+  <link rel="preload" href="../assets/photo.jpg" as="image">
+  
+  <link rel="stylesheet" href="links.css?v=1.0.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -85,6 +96,9 @@
       <p>&copy; 2025 sigmanor | Made with ❤️ and 🤖 by <a href="https://sigmanor.net" target="_blank" rel="noopener noreferrer" class="footer-link">sigmanor</a></p>
     </footer>
   </div>
+
+  <!-- Caching and Performance Script -->
+  <script src="cache.js?v=1.0.0"></script>
 </body>
 
 </html>
