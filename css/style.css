@@ -92,6 +92,16 @@ a:visited {
   color: #6279bb;
 }
 
+.flag-link {
+  text-decoration: none;
+}
+
+.flag-link:hover,
+.flag-link:focus,
+.flag-link:active {
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 1000px) {
   .wrapper {
     font-size: 40px;
