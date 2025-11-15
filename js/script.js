@@ -84,7 +84,7 @@ function executeCommand(command) {
     case 'contacts':
       const x = '<a title="x" href="https://x.com/sigmanor" target="_blank"><img width="45" height="45" src="./assets/x.png" alt="x"></a>';
       const linkedin = '<a title="linkedin" href="https://www.linkedin.com/in/sigmanor/" target="_blank"><img src="./assets/linkedin.svg" alt="linkedin"></a>';
-      const email = '<a title="email" href="mailto:sigmanor@pm.me" target="_blank"><img src = "./assets/mail.png" alt="linkedin"></a>';
+      const email = '<a title="email" href="mailto:dock-brunt-rarity@duck.com" target="_blank"><img src = "./assets/mail.png" alt="linkedin"></a>';
       appendOutput(`<br> ${x} ${linkedin} ${email}`);
       createPrompt();
       break;
