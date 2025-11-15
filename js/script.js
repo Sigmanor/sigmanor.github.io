@@ -73,7 +73,7 @@ function executeCommand(command) {
       break;
     case 'about':
       appendOutput(`<br>👋 My name is Oleksandr, and this is my personal website featuring a design inspired by a terminal interface.<br>`);
-      appendOutput('<br>I\'m from <strong>Ukraine</strong> <a href="https://stand-with-ukraine.pp.ua" target="_blank"><img class="uaFlag" style="vertical-align: bottom;" width="21" height="21" src="./assets/ukraine.png" alt="UA"></a>, and developing cool things is both my primary profession and one of my passions.');
+      appendOutput('<br>I\'m from <strong>Ukraine</strong> <a class="flag-link" href="https://stand-with-ukraine.pp.ua" target="_blank">🇺🇦</a> and developing cool things is both my primary profession and one of my passions.');
       appendOutput('<br>If you\'re interested, you can find my GitHub page <a href="https://github.com/Sigmanor" target="_blank">here</a>.');
       createPrompt();
       break;
@@ -82,10 +82,10 @@ function executeCommand(command) {
       createPrompt();
       break;
     case 'contacts':
-      const x = '<a title="x" href="https://x.com/sigmanor" target="_blank"><img width="45" height="45" src="./assets/x.png" alt="x"></a>';
-      const linkedin = '<a title="linkedin" href="https://www.linkedin.com/in/sigmanor/" target="_blank"><img src="./assets/linkedin.svg" alt="linkedin"></a>';
-      const email = '<a title="email" href="mailto:dock-brunt-rarity@duck.com" target="_blank"><img src = "./assets/mail.png" alt="linkedin"></a>';
-      appendOutput(`<br> ${x} ${linkedin} ${email}`);
+      const xLink = '<a title="x" href="https://x.com/sigmanor" target="_blank">https://x.com/sigmanor</a>';
+      const linkedinLink = '<a title="linkedin" href="https://www.linkedin.com/in/sigmanor/" target="_blank">https://www.linkedin.com/in/sigmanor/</a>';
+      const emailLink = '<a title="email" href="mailto:dock-brunt-rarity@duck.com" target="_blank">dock-brunt-rarity@duck.com</a>';
+      appendOutput(`<br>${xLink}<br>${linkedinLink}<br>${emailLink}`);
       createPrompt();
       break;
     default:
