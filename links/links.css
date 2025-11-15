@@ -154,6 +154,17 @@ body {
   cursor: not-allowed;
 }
 
+.footer a {
+  color: #4a90e2;
+  text-decoration: underline;
+}
+
+.footer a:visited,
+.footer a:hover,
+.footer a:active {
+  color: #4a90e2;
+}
+
 /* Mobile responsive design */
 @media (max-width: 767px) {
   .link-card.article-link .link-title {
